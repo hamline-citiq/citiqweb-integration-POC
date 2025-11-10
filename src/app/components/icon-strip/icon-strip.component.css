@@ -1,0 +1,105 @@
+:host {
+  display: block;
+}
+
+.curved-icon-strip {
+  position: relative;
+  background: #010101;
+  padding: 3.5rem 0;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  clip-path: ellipse(130% 100% at 50% 0%);
+  overflow: hidden;
+  box-shadow: 0 -18px 55px rgba(0, 0, 0, 0.75);
+}
+
+.curved-icon-strip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 0.85) 100%
+    ),
+    linear-gradient(90deg, #020202 0%, #062403 35%, #19550a 55%, #2f8f0d 70%, #74c100 100%);
+  background-size: 100% 100%, 200% 100%;
+  animation: greenPulse 12s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.curved-icon-strip::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 35%;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(26, 79, 7, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.icon-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+  padding-left: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.icon {
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.icon img {
+  max-height: 56px;
+  opacity: 0.85;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.45));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon:hover img,
+.icon:focus-visible img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.icon.active img {
+  transform: scale(1.25);
+  opacity: 1;
+}
+
+.icon.active {
+  transform: translateY(-6px);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes greenPulse {
+  0% {
+    background-position: 0% 50%, 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%;
+  }
+}

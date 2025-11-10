@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --citiq-green: #79C000;
+  --citiq-green-light: #92E800;
+  --citiq-green-dark: #3A6B00;
+  --citiq-black: #000000;
+  --citiq-deep-black: #021A1A;
+  --citiq-dark-green: #042222;
+  --white: #FFFFFF;
+  --grey: #58595b;
+  --noise-overlay: radial-gradient(rgba(255, 255, 255, 0.06) 0.5px, transparent 0.5px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
+  background-color: var(--citiq-black);
+  color: var(--white);
+}
+
+section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(circle at 50% -50%, rgba(121, 192, 0, 0.12), transparent 80%);
+  pointer-events: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(145deg, #79C000, #009800);
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 20px 40px rgba(121, 192, 0, 0.3);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(145deg, #8ae000, #009800);
+  transform: translateY(-3px);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0.75rem;
+}

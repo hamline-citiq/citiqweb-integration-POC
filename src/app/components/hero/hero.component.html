@@ -1,0 +1,32 @@
+<section class="hero-section">
+  <div class="hero-content">
+    <p class="hero-tag">Digital utility infrastructure</p>
+    <h1>Powering people.</h1>
+    <h3 class="hero-lede">
+      Trusted by over 1 million South Africans.
+    </h3>
+    <div class="hero-buttons" role="group" aria-label="Primary actions">
+      <button class="btn primary">Download App</button>
+      <button class="btn secondary">Learn More</button>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="carousel">
+      <img
+        [src]="slides[currentSlide]"
+        [attr.alt]="'Hero slide ' + (currentSlide + 1)"
+      />
+    </div>
+    <div class="carousel-dots" role="tablist">
+      <button
+        type="button"
+        *ngFor="let slide of slides; let i = index"
+        class="dot"
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)"
+        [attr.aria-label]="'Show hero slide ' + (i + 1)"
+        [attr.aria-selected]="i === currentSlide"
+      ></button>
+    </div>
+  </div>
+</section>

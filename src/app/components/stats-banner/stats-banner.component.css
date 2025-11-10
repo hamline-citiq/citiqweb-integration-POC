@@ -1,0 +1,30 @@
+.stats-banner {
+  background: radial-gradient(circle at 50% 0%, rgba(121, 192, 0, 0.12), var(--citiq-black) 85%);
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+  clip-path: ellipse(130% 100% at 50% 0%);
+  position: relative;
+  z-index: 2;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.stat h2 {
+  color: var(--citiq-green);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(121, 192, 0, 0.4);
+}
+
+.stat p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+  letter-spacing: 0.03em;
+}

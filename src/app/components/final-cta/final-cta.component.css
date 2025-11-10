@@ -1,0 +1,139 @@
+.curve-divider {
+  display: block;
+  width: 100%;
+  height: 120px;
+  transform: translateY(1px);
+}
+
+.curve-divider path {
+  fill: var(--citiq-black);
+}
+
+.final-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem clamp(1.5rem, 6vw, 4rem);
+  background: radial-gradient(circle at 20% 50%, var(--citiq-green) 0%, var(--citiq-deep-black) 90%);
+  color: var(--white);
+  flex-wrap: wrap;
+  clip-path: ellipse(140% 100% at 50% 0%);
+  position: relative;
+  z-index: 2;
+  gap: 2rem;
+}
+
+.cta-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cta-content .tag {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+}
+
+.cta-content h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.cta-content .lede {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.9rem 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--citiq-green), #64b200);
+  color: #000;
+  box-shadow: 0 0 25px rgba(121, 192, 0, 0.3);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(121, 192, 0, 0.4);
+}
+
+.store-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qr {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+
+.store-banner {
+  width: clamp(220px, 30vw, 320px);
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.25rem;
+}
+
+.partners {
+  background: var(--citiq-black);
+  padding: 2.5rem 1.5rem 3.25rem;
+  overflow: hidden;
+}
+
+.logo-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.partner-pill {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 960px) {
+  .final-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .store-links {
+    width: 100%;
+  }
+}

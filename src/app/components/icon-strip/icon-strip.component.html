@@ -1,0 +1,12 @@
+<section class="curved-icon-strip">
+  <div class="icon-track">
+    <button
+      class="icon"
+      type="button"
+      *ngFor="let partner of loopedPartners; index as i; trackBy: trackByIndex"
+      [class.active]="i % partners.length === activeIndex"
+      (click)="setActive(i)">
+      <img [src]="partner.src" [alt]="partner.name" loading="lazy" />
+    </button>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<section class="user-wave-section">
+  <div class="wave-heading">
+    <p class="eyebrow">Choose your path</p>
+    <h2>Solutions that flex for every profile.</h2>
+  </div>
+  <div class="user-card-wave">
+    <article class="user-card" *ngFor="let card of solutionsCards">
+      <div class="user-media" aria-hidden="true" *ngIf="card.image">
+        <img [src]="card.image" [alt]="card.title" loading="lazy" />
+      </div>
+      <div class="user-copy">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.copy }}</p>
+        <button class="link-btn" type="button">Learn More</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="feature-flow-section">
+  <div
+    class="feature-row"
+    *ngFor="let row of featureRows"
+    [class.reverse]="row.reverse">
+    <div class="feature-media" aria-hidden="true" *ngIf="row.image">
+      <img [src]="row.image" [alt]="row.title" loading="lazy" />
+    </div>
+    <div class="feature-copy">
+      <p class="eyebrow">{{ row.eyebrow }}</p>
+      <h3>{{ row.title }}</h3>
+      <p>{{ row.copy }}</p>
+      <button class="link-btn" type="button">{{ row.cta }}</button>
+    </div>
+  </div>
+</section>

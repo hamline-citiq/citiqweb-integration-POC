@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: var(--citiq-black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 25% 45%, var(--citiq-green) 0%, var(--citiq-black) 75%),
+    repeating-radial-gradient(circle, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px);
+  background-blend-mode: overlay;
+  clip-path: ellipse(140% 100% at 50% 0%);
+}
+
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--noise-overlay);
+  background-size: 4px 4px;
+  opacity: 0.25;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
