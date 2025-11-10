@@ -40,3 +40,21 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Angular build outputs
+dist/
+node_modules/
+
+# OS + IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large or private files
+*.pdf
+*.zip
+*.mp4
+*.mov
+*.psd
+
