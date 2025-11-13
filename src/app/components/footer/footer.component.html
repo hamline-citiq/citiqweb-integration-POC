@@ -1,1 +1,43 @@
-<p>footer works!</p>
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <img [src]="logoUrl" alt="Citiq Prepaid" loading="lazy" />
+      <p>© {{ currentYear }} Citiq Prepaid</p>
+    </div>
+
+    <div class="footer-links">
+      <div
+        class="link-group"
+        *ngFor="let group of linkGroups; trackBy: trackByIndex">
+        <h4>{{ group.title }}</h4>
+        <a
+          *ngFor="let link of group.links; trackBy: trackByIndex"
+          class="footer-link"
+          [href]="link.href">
+          {{ link.label }}
+        </a>
+      </div>
+
+      <div class="contact-block">
+        <h4>Contact</h4>
+        <a class="footer-link" [href]="'tel:' + contactPhoneLink">
+          {{ contact.phone }}
+        </a>
+        <a class="footer-link" [href]="'mailto:' + contact.email">
+          {{ contact.email }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="policy-links">
+      <a
+        *ngFor="let policy of policies; trackBy: trackByIndex"
+        class="footer-link"
+        [href]="policy.href">
+        {{ policy.label }}
+      </a>
+    </div>
+  </div>
+</footer>

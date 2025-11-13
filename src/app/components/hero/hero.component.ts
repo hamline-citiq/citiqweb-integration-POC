@@ -10,9 +10,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit, OnDestroy {
   slides: string[] = [
-    'assets/contractors.png',
-    'assets/HERO1.png',
-    'assets/carosel3.png'
+    'https://s3.us-east-2.amazonaws.com/assets.citiqprepaid.co.za/citiq_advance_banner.png',
+    'https://s3.us-east-2.amazonaws.com/assets.citiqprepaid.co.za/Citiq_advance_dark.png',
+    'https://s3.us-east-2.amazonaws.com/assets.citiqprepaid.co.za/dialog_ad_selected.svg'
   ];
 
   currentSlide = 0;

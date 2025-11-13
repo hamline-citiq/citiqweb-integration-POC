@@ -1,15 +1,21 @@
 <section class="stats-banner">
   <div class="stats-container">
     <div class="stat">
-      <h2>{{ meterCount | number }}</h2>
+      <div class="stat-value">
+        <span class="value">{{ meterCount | number }}</span>
+      </div>
       <p>Meters managed</p>
     </div>
     <div class="stat">
-      <h2>{{ registeredUsers | number }}</h2>
+      <div class="stat-value">
+        <span class="value">{{ registeredUsers | number }}</span>
+      </div>
       <p>Monthly tenants</p>
     </div>
     <div class="stat">
-      <h2>{{ transactions | number }}</h2>
+      <div class="stat-value">
+        <span class="value">{{ transactions | number }}</span>
+      </div>
       <p>Transactions tracked</p>
     </div>
   </div>

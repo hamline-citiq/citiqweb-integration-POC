@@ -1,6 +1,5 @@
 :host {
   display: block;
-  min-height: 100vh;
   background-color: var(--citiq-black);
   color: var(--white);
   overflow-x: hidden;
@@ -10,7 +9,9 @@
   position: relative;
   overflow: hidden;
   color: var(--white);
-  min-height: 100vh;
+  min-height: auto;
+  padding: 1rem;
+
   background:
     radial-gradient(circle at 25% 45%, var(--citiq-green) 0%, var(--citiq-black) 75%),
     repeating-radial-gradient(circle, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px);
@@ -18,6 +19,7 @@
   clip-path: ellipse(140% 100% at 50% 0%);
 }
 
+/* Subtle noise overlay */
 .hero-wrapper::before {
   content: "";
   position: absolute;

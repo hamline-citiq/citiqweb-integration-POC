@@ -4,6 +4,14 @@
   <app-hero></app-hero>
 </div>
 
+<app-icon-strip></app-icon-strip>
+
+<app-stats-banner
+  [meterCount]="meterCount"
+  [registeredUsers]="registeredUsers"
+  [transactions]="transactions">
+</app-stats-banner>
+
 <app-value-cards></app-value-cards>
 
 <app-solutions
@@ -12,15 +20,9 @@
   [transactions]="transactions">
 </app-solutions>
 
-<app-stats-banner
-  [meterCount]="meterCount"
-  [registeredUsers]="registeredUsers"
-  [transactions]="transactions">
-</app-stats-banner>
-
 <app-final-cta></app-final-cta>
 
-<app-icon-strip></app-icon-strip>
+<app-footer></app-footer>
 
 <app-cookie-banner
   *ngIf="showCookieBanner"

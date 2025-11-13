@@ -9,6 +9,7 @@ import { StatsBannerComponent } from './components/stats-banner/stats-banner.com
 import { FinalCtaComponent } from './components/final-cta/final-cta.component';
 import { IconStripComponent } from './components/icon-strip/icon-strip.component';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 type StatProperty = 'meterCount' | 'registeredUsers' | 'transactions';
 
@@ -24,7 +25,8 @@ type StatProperty = 'meterCount' | 'registeredUsers' | 'transactions';
     StatsBannerComponent,
     FinalCtaComponent,
     IconStripComponent,
-    CookieBannerComponent
+    CookieBannerComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

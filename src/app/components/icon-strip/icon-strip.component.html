@@ -1,12 +1,23 @@
-<section class="curved-icon-strip">
-  <div class="icon-track">
-    <button
-      class="icon"
-      type="button"
-      *ngFor="let partner of loopedPartners; index as i; trackBy: trackByIndex"
-      [class.active]="i % partners.length === activeIndex"
-      (click)="setActive(i)">
-      <img [src]="partner.src" [alt]="partner.name" loading="lazy" />
-    </button>
+<section class="super-partners-strip">
+  <div class="strip-panel">
+    <div class="copy-block">
+      <p class="eyebrow">Our <span>SUPER PARTNERS</span></p>
+      <a class="cta-link" href="#contact">
+        Get in touch
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="marquee" aria-label="Partner logos">
+      <div class="icon-track">
+        <div
+          class="icon"
+          *ngFor="let partner of marqueePartners; index as i; trackBy: trackByIndex">
+          <img [src]="partner.src" [alt]="partner.name" loading="lazy" />
+        </div>
+      </div>
+    </div>
   </div>
 </section>

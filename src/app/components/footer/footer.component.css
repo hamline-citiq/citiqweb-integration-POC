@@ -1,0 +1,96 @@
+:host {
+  display: block;
+}
+
+.site-footer {
+  background: linear-gradient(135deg, #030c03, #020202 55%, #020b05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 3rem clamp(1.5rem, 6vw, 4rem);
+}
+
+.footer-shell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.footer-brand img {
+  width: 132px;
+  max-width: 100%;
+  filter: drop-shadow(0 8px 20px rgba(121, 192, 0, 0.35));
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2.5rem;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.link-group,
+.contact-block {
+  min-width: 160px;
+}
+
+.link-group h4,
+.contact-block h4 {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--citiq-green);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.policy-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .footer-shell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

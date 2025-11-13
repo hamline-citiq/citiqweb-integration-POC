@@ -5,7 +5,7 @@
 .curve-divider {
   display: block;
   width: 100%;
-  height: 100px;
+  height: 0.9px;
   transform: translateY(-1px);
 }
 
@@ -17,11 +17,9 @@
   position: relative;
   padding: 6rem clamp(1.5rem, 6vw, 6rem);
   background:
-    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--citiq-green-light) 25%, transparent) 0%, transparent 60%),
-    linear-gradient(145deg, var(--citiq-black), var(--citiq-deep-black));
-  background-size: 140% 140%, 400% 400%;
-  background-position: center, 0% 50%;
-  animation: energyFlow 18s ease infinite;
+    radial-gradient(circle at 25% 45%, var(--citiq-green) 0%, var(--citiq-black) 70%),
+    repeating-radial-gradient(circle, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px);
+  background-blend-mode: overlay;
   color: var(--white);
   clip-path: ellipse(120% 100% at 50% 0%);
   overflow: hidden;
